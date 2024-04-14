@@ -1,0 +1,87 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia'; /* Changed font to something more girly and feminine */
+    background-color: #a5c4ea; /* Changed background color to light pink */
+}
+
+header {
+    background-color: #daaeac; /* Changed header background color to light blue */
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    width: 300px;
+    height: 300px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4d3d3;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #000000;
+}
+
+select,
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #000000;
+}
+
+select:focus,
+input[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(212, 194, 194, 0.2);
+}
+
+#genre-input,
+#author-input {
+    display: none;
+}
+
+#genre-input select,
+#author-input select {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #daaeac; /* Changed footer background color to light blue */
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 16px;
+    color: #333;
+}

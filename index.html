@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>biblio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images and fonts/biblio logo.png" alt="Book Recommendation Website Logo">
+        <h4>Discover your next adventure at Biblio, where every page holds magic <3</h4>
+    </header>
+    <main>
+        
+        <form action="join.php" method="POST">
+        <fieldset>
+            <legend>Recommendation Criteria:</legend>
+            <label for="criteria">By Genre or by Author:</label>
+            <select name="criteria" id="criteria">
+                <option value="">Select Option</option>
+                <option value="author">Author</option>
+                <option value="genre">Genre</option>
+            </select>
+
+
+            <div id="genre-input" style="display:none;">
+            <label for="genre">Genre:</label>
+            <select name="genre" id="genre">
+                <option value="">Select Option</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Classic">Classic</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Gothic Fiction">Gothic Fiction</option>
+                <option value="Historical Fiction">Historical Fiction</option>
+                <option value="Horror">Horror</option>
+                <option value="Magical Realism">Magical Realism</option>
+                <option value="Mystery Thriller">Mystery Thriller</option>
+                <option value="Mythology">Mythology</option>
+                <option value="Philosopy">Philosophy</option>
+                <option value="Contemporary Romance">Contemporary Romance</option>
+            </select>
+            <label for="year-range">Year Range:</label>
+            <select name="genre" id="genre">
+                <option value="">Select Option</option>
+                <option value="<1980">before 1980</option>
+                <option value="between 1980 and 1985">1980-1985</option>
+                <option value="between 1985 and 1990">1985-1990</option>
+                <option value="between 1990 and 1995">1990-1995</option>
+                <option value="between 1995 and 2000">1995-2000</option>
+                <option value="between 2000 and 2005">2000-2005</option>
+                <option value="between 2005 and 2010">2005-2010</option>
+                <option value="between 2010 and 2015">2010-2015</option>
+                <option value="between 2015 and 2020">2015-2020</option>
+                <option value=">2020">>2020</option>
+            </select>
+            </div>
+            
+            <div id="author-input" style="display:none;">
+            <label for="author">Author:</label>
+            <select name="author" id="author">
+                <option value="A.J. Finn">A.J. Finn</option>
+                <option value="Abby Jimenez">Abby Jimenez</option>
+                <option value="Adam Nevill">Adam Nevill</option>
+                <option value="Albert Camus">Albert Camus</option>
+                <option value="Aldous Huxley">Aldous Huxley</option>
+                <option value="Alex Michaelides">Alex Michaelides</option>
+                <option value="Alexandra Bracken">Alexandra Bracken</option>
+                <option value="Alexandre Dumas">Alexandre Dumas</option>
+                <option value="Alexis Daria">Alexis Daria</option>
+                <option value="Alexis Hall">Alexis Hall</option>
+                <option value="Alfred Hitchcock and Robert Arthur Jr.">Alfred Hitchcock and Robert Arthur Jr.</option>
+                <option value="Algernon Blackwood">Algernon Blackwood</option>
+                <option value="Ali Hazelwood">Ali Hazelwood</option>
+                <option value="Alice Feeney">Alice Feeney</option>
+                <option value="Alice Hoffman">Alice Hoffman</option>
+                <option value="Alice Walker">Alice Walker</option>
+                <option value="Alison Cochrun">Alison Cochrun</option>
+                <option value="Alma Katsu">Alma Katsu</option>
+                <option value="Ambrose Bierce">Ambrose Bierce</option>
+                <option value="Amor Towles">Amor Towles</option>
+                <option value="André Gide">André Gide</option>
+                <option value="Andy Weir">Andy Weir</option>
+                <option value="Angela Carter">Angela Carter</option>
+                <option value="Ann Patchett">Ann Patchett</option>
+                <option value="Ann Radcliffe">Ann Radcliffe</option>
+                <option value="Anonymous">Anonymous</option>
+                <option value="Anthony Doerr">Anthony Doerr</option>
+                <option value="Antoine de Saint-Exupéry">Antoine de Saint-Exupéry</option>
+                <option value="Aristotle">Aristotle</option>
+                <option value="Arthur Conan Doyle">Arthur Conan Doyle</option>
+                <option value="Arundhati Roy">Arundhati Roy</option>
+                <option value="Audrey Niffenegger">Audrey Niffenegger</option>
+                <option value="B.A. Paris">B.A. Paris</option>
+                <option value="Barbara Kingsolver">Barbara Kingsolver</option>
+                <option value="Baroness Orczy">Baroness Orczy</option>
+                <option value="Ben Okri">Ben Okri</option>
+                <option value="Beth O'Leary">Beth O'Leary</option>
+                <option value="Boethius">Boethius</option>
+                <option value="Bram Stoker">Bram Stoker</option>
+                <option value="Bram Stoker & F. Paul Wilson (adapted by)">Bram Stoker & F. Paul Wilson (adapted by)</option>
+                <option value="Bram Stoker & Roy Thomas (adapted by)">Bram Stoker & Roy Thomas (adapted by)</option>
+                <option value="Brandon Sanderson">Brandon Sanderson</option>
+                <option value="Brent Weeks">Brent Weeks</option>
+                <option value="Bret Easton Ellis">Bret Easton Ellis</option>
+                <option value="C.J. Tudor">C.J. Tudor</option>
+                <option value="C.S. Lewis">C.S. Lewis</option>
+                <option value="Caleb Carr">Caleb Carr</option>
+                <option value="Carlos Ruiz Zafón">Carlos Ruiz Zafón</option>
+                <option value="Carmen Maria Machado">Carmen Maria Machado</option>
+                <option value="Caroline Kepnes">Caroline Kepnes</option>
+                <option value="Casey McQuiston">Casey McQuiston</option>
+                <option value="Charles Dickens">Charles Dickens</option>
+                <option value="Charles Frazier">Charles Frazier</option>
+                <option value="Charles Maturin">Charles Maturin</option>
+                <option value="Charlotte Brontë">Charlotte Brontë</option>
+                <option value="Chimamanda Ngozi Adichie">Chimamanda Ngozi Adichie</option>
+                <option value="Chinua Achebe">Chinua Achebe</option>
+                <option value="Chitra Banerjee Divakaruni">Chitra Banerjee Divakaruni</option>
+                <option value="Christina Lauren">Christina Lauren</option>
+                <option value="Christina McDonald">Christina McDonald</option>
+                <option value="Claire Messud">Claire Messud</option>
+                <option value="Clare Mackintosh">Clare Mackintosh</option>
+                <option value="Clarice Lispector">Clarice Lispector</option>
+                <option value="Clive Barker">Clive Barker</option>
+                <option value="Colleen Hoover">Colleen Hoover</option>
+                <option value="Colleen McCullough">Colleen McCullough</option>
+                <option value="Colson Whitehead">Colson Whitehead</option>
+                <option value="Dan Brown">Dan Brown</option>
+                <option value="Daniel Defoe">Daniel Defoe</option>
+                <option value="Dante Alighieri">Dante Alighieri</option>
+                <option value="Daphne du Maurier">Daphne du Maurier</option>
+                <option value="Dashiell Hammett">Dashiell Hammett</option>
+                <option value="David G. Hartwell">David G. Hartwell</option>
+                <option value="David Grann">David Grann</option>
+                <option value="David Mitchell">David Mitchell</option>
+                <option value="David Seltzer">David Seltzer</option>
+                <option value="Deborah Noyes">Deborah Noyes</option>
+                <option value="Dennis Lehane">Dennis Lehane</option>
+                <option value="Diane Setterfield">Diane Setterfield</option>
+                <option value="Don DeLillo">Don DeLillo</option>
+                <option value="Donna Tartt">Donna Tartt</option>
+                <option value="Douglas Adams">Douglas Adams</option>
+                <option value="E. Lockhart">E. Lockhart</option>
+                <option value="E. M. Forster">E. M. Forster</option>
+                <option value="Edgar Allan Poe">Edgar Allan Poe</option>
+                <option value="Edith Hamilton">Edith Hamilton</option>
+                <option value="Edward P. Jones">Edward P. Jones</option>
+                <option value="Elena Armas">Elena Armas</option>
+                <option value="Elizabeth Gilbert">Elizabeth Gilbert</option>
+                <option value="Elizabeth Kostova">Elizabeth Kostova</option>
+                <option value="Emily Brontë">Emily Brontë</option>
+                <option value="Emily Henry">Emily Henry</option>
+                <option value="Emma Lord">Emma Lord</option>
+                <option value="Eoin Colfer">Eoin Colfer</option>
+                <option value="Erin Morgenstern">Erin Morgenstern</option>
+                <option value="Euni Kim">Euni Kim</option>
+                <option value="Frank Herbert">Frank Herbert</option>
+                <option value="Franz Kafka">Franz Kafka</option>
+                <option value="Friedrich Nietzsche">Friedrich Nietzsche</option>
+                <option value="Fyodor Dostoevsky">Fyodor Dostoevsky</option>
+                <option value="Gabriel García Márquez">Gabriel García Márquez</option>
+                <option value="Gaston Leroux">Gaston Leroux</option>
+                <option value="Geoffrey Chaucer">Geoffrey Chaucer</option>
+                <option value="George Eliot">George Eliot</option>
+                <option value="George Orwell">George Orwell</option>
+                <option value="George R.R. Martin"></option>
+                <option value="George Saunders">George Saunders</option>
+                <option value="Gillian Flynn">Gillian Flynn</option>
+                <option value="Grady Hendrix">Grady Hendrix</option>
+                <option value="Graeme Simsion">Graeme Simsion</option>
+                <option value="Greer Hendricks">Greer Hendricks</option>
+                <option value="H. P. Lovecraft">H. P. Lovecraft</option>
+                <option value="H. Rider Haggard">H. Rider Haggard</option>
+                <option value="Han Kang">Han Kang</option>
+                <option value="Harper Lee">Harper Lee</option>
+                <option value="Haruki Murakami">Haruki Murakami</option>
+                <option value="Heather Cocks">Heather Cocks</option>
+                <option value="Heather Morris">Heather Morris</option>
+                <option value="Helen Hoang">Helen Hoang</option>
+                <option value="Helen Wecker">Helen Wecker</option>
+                <option value="Henry James">Henry James</option>
+                <option value="Hergé">Hergé</option>
+                <option value="Herman Melville">Herman Melville</option>
+                <option value="Hermann Hesse">Hermann Hesse</option>
+                <option value="Hesiod">Hesiod</option>
+                <option value="Hilary Mantel">Hilary Mantel</option>
+                <option value="Homer">Homer</option>
+                <option value="Horace Walpole">Horace Walpole</option>
+                <option value="Ian McEwan">Ian McEwan</option>
+                <option value="Immanuel Kant">Immanuel Kant</option>
+                <option value="Ira Levin">Ira Levin</option>
+                <option value="Isabel Allende">Isabel Allende</option>
+                <option value="J. R. R. Tolkien">J. R. R. Tolkien</option>
+                <option value="J. Sheridan Le Fanu">J. Sheridan Le Fanu</option>
+                <option value="J.K. Rowling">J.K. Rowling</option>
+                <option value="J.R.R. Tolkien">J.R.R. Tolkien</option>
+                <option value="Jack London">Jack London</option>
+                <option value="James Clavell">James Clavell</option>
+                <option value="James Islington">James Islington</option>
+                <option value="James Joyce">James Joyce</option>
+                <option value="Jane Austen">Jane Austen</option>
+                <option value="Jasmine Guillory">Jasmine Guillory</option>
+                <option value="Jean Lee Latham">Jean Lee Latham</option>
+                <option value="Jean-Jacques Rousseau">Jean-Jacques Rousseau</option>
+                <option value="Jean-Paul Sartre">Jean-Paul Sartre</option>
+                <option value="Jean-Philippe Toussaint">Jean-Philippe Toussaint</option>
+                <option value="Jeff VanderMeer">Jeff VanderMeer</option>
+                <option value="Jeffery Deaver">Jeffery Deaver</option>
+                <option value="Jeffrey Eugenides">Jeffrey Eugenides</option>
+                <option value="Jennette McCurdy">Jennette McCurdy</option>
+                <option value="Jim Butcher">Jim Butcher</option>
+                <option value="Jo Nesbø">Jo Nesbø</option>
+                <option value="Johann David Wyss">Johann David Wyss</option>
+                <option value="John Ajvide Lindqvist">John Ajvide Lindqvist</option>
+                <option value="John Christopher">John Christopher</option>
+                <option value="John Grisham">John Grisham</option>
+                <option value="John Locke">John Locke</option>
+                <option value="John Steinbeck">John Steinbeck</option>
+                <option value="John W. Campbell Jr.">John W. Campbell Jr.</option>
+                <option value="Jonathan Safran Foer">Jonathan Safran Foer</option>
+                <option value="Jonathan Swift">Jonathan Swift</option>
+                <option value="José Saramago">José Saramago</option>
+                <option value="Joseph Conrad">Joseph Conrad</option>
+                <option value="Josh Malerman">Josh Malerman</option>
+                <option value="Jostein Gaarder">Jostein Gaarder</option>
+                <option value="Jules Verne">Jules Verne</option>
+                <option value="Julie Orringer">Julie Orringer</option>
+                <option value="Juno Dawson">Juno Dawson</option>
+                <option value="Junot Díaz">Junot Díaz</option>
+                <option value="K.A. Tucker">K.A. Tucker</option>
+                <option value="Kathryn Stockett">Kathryn Stockett</option>
+                <option value="Kazuo Ishiguro">Kazuo Ishiguro</option>
+                <option value="Ken Follett">Ken Follett</option>
+                <option value="Ken Kesey">Ken Kesey</option>
+                <option value="Ken Liu">Ken Liu</option>
+                <option value="Kenneth Grahame">Kenneth Grahame</option>
+                <option value="Kim Stanley Robinson">Kim Stanley Robinson</option>
+                <option value="Kristin Hannah">Kristin Hannah</option>
+                <option value="Krysten Ritter">Krysten Ritter</option>
+                <option value="Kurt Vonnegut">Kurt Vonnegut</option>
+                <option value="Larry McMurtry">Larry McMurtry</option>
+                <option value="Laura Esquivel">Laura Esquivel</option>
+                <option value="Laura Purcell">Laura Purcell</option>
+                <option value="Lauren Beukes">Lauren Beukes</option>
+                <option value="Leigh Bardugo">Leigh Bardugo</option>
+                <option value="Leo Tolstoy">Leo Tolstoy</option>
+                <option value="Leslie Marmon Silko">Leslie Marmon Silko</option>
+                <option value="Lewis Carroll">Lewis Carroll</option>
+                <option value="Liane Moriarty">Liane Moriarty</option>
+                <option value="Linsey Miller">Linsey Miller</option>
+                <option value="Liv Constantine">Liv Constantine</option>
+                <option value="Louisa May Alcott">Louisa May Alcott</option>
+                <option value="Louisa Morgan">Louisa Morgan</option>
+                <option value="Lucy Parker">Lucy Parker</option>
+                <option value="Lyssa Kay Adams">Lyssa Kay Adams</option>
+                <option value="Madeline Miller">Madeline Miller</option>
+                <option value="Marcus Aurelius">Marcus Aurelius</option>
+                <option value="Margaret Atwood">Margaret Atwood</option>
+                <option value="Margaret Mitchell">Margaret Mitchell</option>
+                <option value="Marion Zimmer Bradley">Marion Zimmer Bradley</option>
+                <option value="Mark Haddon">Mark Haddon</option>
+                <option value="Mark Twain">Mark Twain</option>
+                <option value="Mark Z. Danielewski">Mark Z. Danielewski</option>
+                <option value="Markus Zusak">Markus Zusak</option>
+                <option value="Martin Heidegger">Martin Heidegger</option>
+                <option value="Mary Ann Shaffer & Annie Barrows">Mary Ann Shaffer & Annie Barrows</option>
+                <option value="Mary Kubica">Mary Kubica</option>
+                <option value="Mary Shelley">Mary Shelley</option>
+                <option value="Matthew Lewis">Matthew Lewis</option>
+                <option value="Mayan scribes">Mayan scribes</option>
+                <option value="Megan Miranda">Megan Miranda</option>
+                <option value="Mhairi McFarlane">Mhairi McFarlane</option>
+                <option value="Michael Chabon">Michael Chabon</option>
+                <option value="Michael Connelly">Michael Connelly</option>
+                <option value="Michael Crichton">Michael Crichton</option>
+                <option value="Michael Ende">Michael Ende</option>
+                <option value="Michael J. Sullivan">Michael J. Sullivan</option>
+                <option value="Michael Jordan">Michael Jordan</option>
+                <option value="Miguel de Cervantes">Miguel de Cervantes</option>
+                <option value="Mikhail Bulgakov">Mikhail Bulgakov</option>
+                <option value="Min Jin Lee">Min Jin Lee</option>
+                <option value="Murasaki Shikibu">Murasaki Shikibu</option>
+                <option value="Nathaniel Hawthorne">Nathaniel Hawthorne</option>
+                <option value="Neil Gaiman">Neil Gaiman</option>
+                <option value="Neil Gaiman and various artists">Neil Gaiman and various artists</option>
+                <option value="Nick Cutter">Nick Cutter</option>
+                <option value="Orson Scott Card">Orson Scott Card</option>
+                <option value="Oscar Wilde">Oscar Wilde</option>
+                <option value="Otomo Yakamochi">Otomo Yakamochi</option>
+                <option value="Ovid">Ovid</option>
+                <option value="Paolo Giordano">Paolo Giordano</option>
+                <option value="Patrick Rothfuss">Patrick Rothfuss</option>
+                <option value="Paula Hawkins">Paula Hawkins</option>
+                <option value="Paula McLain">Paula McLain</option>
+                <option value="Pauline E. Dungate">Pauline E. Dungate</option>
+                <option value="Paulo Coelho">Paulo Coelho</option>
+                <option value="Peter Carey">Peter Carey</option>
+                <option value="Peter Straub">Peter Straub</option>
+                <option value="Peter Swanson">Peter Swanson</option>
+                <option value="Peter V. Brett">Peter V. Brett</option>
+                <option value="Philip Pullman">Philip Pullman</option>
+                <option value="Plato">Plato</option>
+                <option value="R.F. Kuang">R.F. Kuang</option>
+                <option value="R.J. Palacio">R.J. Palacio</option>
+                <option value="Rachel Lynn Solomon">Rachel Lynn Solomon</option>
+                <option value="Ray Bradbury">Ray Bradbury</option>
+                <option value="Raymond Chandler">Raymond Chandler</option>
+                <option value="Rebecca Makkai">Rebecca Makkai</option>
+                <option value="Rebecca Roanhorse">Rebecca Roanhorse</option>
+                <option value="René Descartes">René Descartes</option>
+                <option value="Rick Riordan">Rick Riordan</option>
+                <option value="Riley Sager">Riley Sager</option>
+                <option value="Roald Dahl">Roald Dahl</option>
+                <option value="Robert Galbraith">Robert Galbraith</option>
+                <option value="Robert Jordan">Robert Jordan</option>
+                <option value="Robert Louis Stevenson">Robert Louis Stevenson</option>
+                <option value="Robert M. Pirsig">Robert M. Pirsig</option>
+                <option value="Robin Hobb">Robin Hobb</option>
+                <option value="Robin S. Sharma">Robin S. Sharma</option>
+                <option value="Rosie Danan">Rosie Danan</option>
+                <option value="Rudyard Kipling">Rudyard Kipling</option>
+                <option value="Ruth Ware">Ruth Ware</option>
+                <option value="S.J. Watson">S.J. Watson</option>
+                <option value="Sally Thorne">Sally Thorne</option>
+                <option value="Salman Rushdie">Salman Rushdie</option>
+                <option value="Sarah Waters">Sarah Waters</option>
+                <option value="Scott Lynch">Scott Lynch</option>
+                <option value="Shari Lapena">Shari Lapena</option>
+                <option value="Shirley Jackson">Shirley Jackson</option>
+                <option value="Silvia Moreno-Garcia">Silvia Moreno-Garcia</option>
+                <option value="Simone de Beauvoir">Simone de Beauvoir</option>
+                <option value="Stephen King">Stephen King</option>
+                <option value="Steven Erikson">Steven Erikson</option>
+                <option value="Stieg Larsson">Stieg Larsson</option>
+                <option value="Sue Monk Kidd">Sue Monk Kidd</option>
+                <option value="Susan Hill">Susan Hill</option>
+                <option value="Susanna Clarke">Susanna Clarke</option>
+                <option value="Suzanne Collins">Suzanne Collins</option>
+                <option value="Sylvia Plath">Sylvia Plath</option>
+                <option value="T. H. White">T. H. White</option>
+                <option value="T.J. Klune">T.J. Klune</option>
+                <option value="Talia Hibbert">Talia Hibbert</option>
+                <option value="Tana French">Tana French</option>
+                <option value="Ta-Nehisi Coates">Ta-Nehisi Coates</option>
+                <option value="Tatiana de Rosnay">Tatiana de Rosnay</option>
+                <option value="Taylor Jenkins Reid">Taylor Jenkins Reid</option>
+                <option value="Tessa Bailey">Tessa Bailey</option>
+                <option value="Theodora Goss">Theodora Goss</option>
+                <option value="Thomas Hardy">Thomas Hardy</option>
+                <option value="Thomas Harris">Thomas Harris</option>
+                <option value="Thomas Hobbes">Thomas Hobbes</option>
+                <option value="Tomi Adeyemi">Tomi Adeyemi</option>
+                <option value="Toni Morrison">Toni Morrison</option>
+                <option value="Ursula K. Le Guin">Ursula K. Le Guin</option>
+                <option value="Various authors">Various authors</option>
+                <option value="Victor Hugo">Victor Hugo</option>
+                <option value="Victor LaValle">Victor LaValle</option>
+                <option value="Virgil">Virgil</option>
+                <option value="Virginia Woolf">Virginia Woolf</option>
+                <option value="Vladimir Nabokov">Vladimir Nabokov</option>
+                <option value="Voltaire">Voltaire</option>
+                <option value="Wilkie Collins">Wilkie Collins</option>
+                <option value="William Beckford">William Beckford</option>
+                <option value="William Golding">William Golding</option>
+                <option value="William Peter Blatty">William Peter Blatty</option>
+                <option value="Wilson Rawls">Wilson Rawls</option>
+                <option value="Yaa Gyasi">Yaa Gyasi</option>
+
+                </select>
+            </div>
+
+            <input type="submit" value="Get Recommendations">
+        </fieldset>
+        </form>
+
+        <?php include 'join.php'; ?> 
+    </main>
+    <footer>
+        <p>&copy; 2024 biblio. All rights reserved.</p>
+    </footer>
+    <script>
+        // Get the elements
+        const criteriaSelect = document.getElementById('criteria');
+        const genreInput = document.getElementById('genre-input');
+        const authorInput = document.getElementById('author-input');
+
+// Add event listener to the criteria select element
+        criteriaSelect.addEventListener('change', (event) => {
+  // Hide both inputs
+        genreInput.style.display = 'none';
+        authorInput.style.display = 'none';
+
+  // Show the input based on the selected criteria
+        if (event.target.value === 'genre') {
+            genreInput.style.display = 'block';
+        } else if (event.target.value === 'author') {
+            authorInput.style.display = 'block';
+        }
+});
+    </script>
+</body>
+</html>
